@@ -1,8 +1,11 @@
 import * as express from "express";
 import { Routes } from "./routes";
 import * as bodyParser from 'body-parser';
+import * as cors from 'cors';
 
 const app: express.Application = express();
+app.use(cors({ origin: '*' }));
+
 const port = 5000;
 const routes = new Routes();
 
